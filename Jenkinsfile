@@ -1,8 +1,10 @@
 pipeline {
     agent any
+
+    stages {
         stage("Build") {
             steps {
-                echo 'Using maven to compile and package the code into a deployable format'
+                echo 'Using Maven to compile and package the code into a deployable format'
             }
         }
 
@@ -32,14 +34,15 @@ pipeline {
 
         stage("Integration tests on staging") {
             steps {
-                echo 'Using selenium to perform integration tests in a production like staging environment'
+                echo 'Using Selenium to perform integration tests in a production-like staging environment'
             }
         }
 
         stage("Deploy to production") {
             steps {
-                echo 'Using Ansibleto deploy the final version of the application to the production server'
+                echo 'Using Ansible to deploy the final version of the application to the production server'
             }
         }
     }
 }
+
