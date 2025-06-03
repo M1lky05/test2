@@ -48,7 +48,7 @@ pipeline {
 
         stage("Deploy to Production") {
             steps {
-                echo 'Using Ansible to deploy the final version of the application to the production server'
+                echo 'Using Ansibleto deploy the final version of the application to the production server'
             }
         }
     }
